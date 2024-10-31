@@ -18,7 +18,11 @@ jobs: # ジョブの定義を開始
           python-version: ${{ matrix.python-version }} # マトリクスで指定されたPythonバージョンを使用
       - name: Install Dependencies # 依存関係のインストール
         run: |
+          ls
+          pwd
           cd
+          ls
+          pwd
           pip install .  # pyproject.tomlから依存関係をインストール
       - name: Run pytest
         run: pytest  # pytestを実行
