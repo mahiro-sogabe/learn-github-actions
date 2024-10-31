@@ -12,6 +12,8 @@ jobs: # ジョブの定義を開始
       matrix:
         python-version: [3.12.6] # Pythonバージョン3.9を指定
     steps: # ジョブ内のステップの定義を開始
+      - name: Check out the repository
+        uses: actions/checkout@v4
       - name: Set up Python ${{ matrix.python-version }} # Python環境のセットアップ
         uses: actions/setup-python@v4 # Python環境のセットアップアクションを使用
         with:
