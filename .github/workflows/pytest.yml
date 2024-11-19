@@ -25,4 +25,6 @@ jobs: # ジョブの定義を開始
       - name: Install Dependencies # 依存関係のインストール
         run: pip install -r requirements.txt  # pyproject.tomlから依存関係をインストール
       - name: Run pytest
+        env:
+          PYTHONPATH: ./src
         run: pytest  # pytestを実行
