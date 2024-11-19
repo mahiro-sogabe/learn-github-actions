@@ -69,6 +69,20 @@ pluggy = ">=1.5,<2"
 dev = ["argcomplete", "attrs (>=19.2)", "hypothesis (>=3.56)", "mock", "pygments (>=2.7.2)", "requests", "setuptools", "xmlschema"]
 
 [[package]]
+name = "pytest-github-actions-annotate-failures"
+version = "0.2.0"
+description = "pytest plugin to annotate failed tests with a workflow command for GitHub Actions"
+optional = false
+python-versions = ">=3.7"
+files = [
+    {file = "pytest-github-actions-annotate-failures-0.2.0.tar.gz", hash = "sha256:844ab626d389496e44f960b42f0a72cce29ae06d363426d17ea9ae1b4bef2288"},
+    {file = "pytest_github_actions_annotate_failures-0.2.0-py3-none-any.whl", hash = "sha256:8bcef65fed503faaa0524b59cfeccc8995130972dd7b008d64193cc41b9cde85"},
+]
+
+[package.dependencies]
+pytest = ">=4.0.0"
+
+[[package]]
 name = "ruff"
 version = "0.7.4"
 description = "An extremely fast Python linter and code formatter, written in Rust."
@@ -98,4 +112,4 @@ files = [
 [metadata]
 lock-version = "2.0"
 python-versions = "3.12.6"
-content-hash = "6ced08a9019d4c7676bcb5c4718f2484d489a847f3b83365fd8d22ded19e6db2"
+content-hash = "f02d4d68da07db715822533c369159378526311c051ba9c9d7f4f5ad82c8f70e"

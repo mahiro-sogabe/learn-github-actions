@@ -12,11 +12,13 @@ python = "3.12.6"
 [tool.poetry.group.dev.dependencies]
 pytest = "8.3.3"
 ruff = "0.7.4"
+pytest-github-actions-annotate-failures = "^0.2.0"
 
 [tool.ruff]
 indent-width = 4
 line-length = 99
 target-version = "py312"
+
 
 [tool.ruff.lint]
 ignore = [
@@ -31,6 +33,9 @@ ignore = [
     "RUF001", # ASCIIに類似したUnicode検知を無効化
     "RUF002", # ASCIIに類似したUnicode検知を無効化
 ]
+per-file-ignores = { "test/**/*.py" = [
+    "S101" # Assertの使用を許可
+] }
 select = ["ALL"]
 
 [tool.ruff.lint.pydocstyle]
