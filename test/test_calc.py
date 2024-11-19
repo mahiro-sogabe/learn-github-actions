@@ -1,4 +1,4 @@
-from src import calc
+from src.calc import calc
 
 
 def test_calc_1() -> None:
@@ -7,7 +7,7 @@ def test_calc_1() -> None:
     b: int = 4
     total_value: int = a + b
 
-    assert calc.calc(a, b) == total_value
+    assert calc(a, b) == total_value
 
 
 def test_calc_2() -> None:
@@ -16,4 +16,4 @@ def test_calc_2() -> None:
     b: int = 4
     total_value: int = 9
 
-    assert calc.calc(a, b) == total_value
+    assert calc(a, b) == total_value
