@@ -32,6 +32,6 @@ def convert_timestamp_to_datetime(timestamp: int) -> str:
 if __name__ == "__main__":
     timestamp = get_timestamp()
     datetime_str = convert_timestamp_to_datetime(timestamp)
-    print("--------------------")
-    print(f"{'エポックミリ秒:':<10}{timestamp}")
-    print(f"{'日時文字列:':<12}{datetime_str}")
+    print("--------------------")  # noqa: T201
+    print(f"{'エポックミリ秒:':<10}{timestamp}")  # noqa: T201
+    print(f"{'日時文字列:':<12}{datetime_str}")  # noqa: T201
