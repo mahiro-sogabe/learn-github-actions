@@ -11,6 +11,35 @@ python = "3.12.6"
 
 [tool.poetry.group.dev.dependencies]
 pytest = "8.3.3"
+ruff = "0.7.4"
+
+[tool.ruff]
+indent-width = 4
+line-length = 99
+target-version = "py312"
+
+[tool.ruff.lint]
+ignore = [
+    "COM812", # 他のフォーマッタと競合するためignore推奨
+    "D100", # モジュール用docstring不要化
+    "D203", # D211と互換なしのためignore推奨
+    "D213", # D212と互換なしのためignore推奨
+    "D400", # docstringの文末に"."不要化
+    "D415", # docstringの文末に"./!/?"不要化
+    "INP001", # __init__.py不要化
+    "ISC001", # 他のフォーマッタと競合するためignore推奨
+    "RUF001", # ASCIIに類似したUnicode検知を無効化
+    "RUF002", # ASCIIに類似したUnicode検知を無効化
+]
+select = ["ALL"]
+
+[tool.ruff.lint.pydocstyle]
+convention = "numpy"
+
+[tool.ruff.format]
+indent-style = "space"
+quote-style = "double"
+
 
 [build-system]
 requires = ["poetry-core"]
