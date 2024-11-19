@@ -8,16 +8,13 @@ jobs: # 処理内容
   run-lint:
     name: Run Lint
     runs-on: ubuntu-latest # 実行環境指定
-    strategy:
-      matrix:
-        python-version: [3.12.6] # pythonバージョンを指定
     steps:
       - name: Checkout Repository # リポジトリのチェックアウト
         uses: actions/checkout@v4 # GitHubリポジトリからコードをチェックアウト
       - name: Set up Python ${{ matrix.python-version }} # Python環境のセットアップ
         uses: actions/setup-python@v4 # Python環境のセットアップアクションを使用
         with:
-          python-version: ${{ matrix.python-version }} # マトリクスで指定されたPythonバージョンを使用
+          python-version-file: ".python-version" # 開発環境で使用しているPythonバージョンを使用
       - name: Install Poetry # Poetryのインストール
         run: curl -sSL https://install.python-poetry.org | python3 -
       - name: Export requirements.txt # requirements.txtの作成
