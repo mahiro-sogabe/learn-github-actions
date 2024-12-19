@@ -17,7 +17,7 @@ jobs:
             - name: Run cloc
               run: cloc . --by-file --csv --include-ext=py --exclude-dir=tests,tools --not-match-f='__init__.py' --report-file="stepcount_dummy.csv"
             - name: Upload cloc result
-              uses: actions/upload-artifact@v2
+              uses: actions/upload-artifact@v4
               with:
                 name: result
                 path: stepcount_dummy.csv
